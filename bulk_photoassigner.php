@@ -16,9 +16,9 @@ $media_url = ''; // Media Folder Location
 //Behaivor.
 
 $amount = '2000'; //Amount of posts to be imported per iteration. You can configure the amount of posts depending on what your server can handle.
-$from = '0'; //Starting Amount. 
+$from = '0'; //Starting Amount.
 
-//1st step - Insert all the data from the we have on postmeta to the wp_posts table. We will use the wp_postmeta ID and we make sure to select the 
+//1st step - Insert all the data from the we have on postmeta to the wp_posts table. We will use the wp_postmeta ID and we make sure to select the
 
 $query = "SELECT * from wp_postmeta where meta_key = '".$meta_id."' order by meta_id desc limit $from, $amount";
 
@@ -31,12 +31,14 @@ echo "Datbase connection, Success!";
 
 }
 
+
+KLKLKLK
 $result = $connect->query($query);
 while($row=$result->fetch_assoc())
 {
 if ($row['meta_value'] == "")
 {
-//jump result and dont insert anything	
+//jump result and dont insert anything
 }
 else {
 $insert = "insert into wp_postmeta (post_id, meta_key, meta_value) VALUES ($row[post_id], '_knawatfibu_url', 'https://$media_url/$row[meta_value]')";
