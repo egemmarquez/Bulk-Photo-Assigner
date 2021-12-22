@@ -1,4 +1,5 @@
 <?php
+echo "MERGE MAIN BRANCH TO QWE";
 //custom wordpress importer script
 //The script objective is to be able to import a database from a custom CMS to wordpress.
 //This script imports all the pictures from the old media folder of the Custom CMS (the photos are not actually registered as pictures on the wordpress database)  to be displayed as an external url Picture.
@@ -7,10 +8,10 @@
 //Config
 
 //WP database we are manipulating posts.
-$server = '';
-$username = '';
-$password = '';
-$database = '';
+$server = 'AA';
+$username = 'BB';
+$password = 'CC';
+$database = 'DD';
 $meta_id = '';
 $media_url = ''; // Media Folder Location
 //Behaivor.
